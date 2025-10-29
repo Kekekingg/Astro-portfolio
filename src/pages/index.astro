@@ -4,16 +4,25 @@ import Layout from '../layouts/Layout.astro';
 import SocialMedia from '../components/icons/SocialMedia.astro';
 import Github from '../components/icons/Github.astro';
 import Linkedin from '../components/icons/Linkedin.astro';
+import Mail from '../components/icons/Mail.astro';
+import ProfilePic from '../assets/Erik_Reyes.png';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Home">
+<Layout 
+	title="Porfolio - Erik Reyes - Web Developer and Developer | UI Design | React | Astro"
+	description="Contact me at">
 	<main>
 		<section class="w-full mx-auto lg:w-[740px] py-44 px-5 flex flex-col gap-y-6">
+			<img 
+				class="rounded-full w-12 h-12 " 
+				src={ProfilePic.src} 
+				alt="Erik Photo"
+			/>
 			<h1 
-			class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-8"
+			class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-5"
 			>
 				Hey, I am Erik Reyes 
 				<a 
@@ -26,17 +35,21 @@ import Linkedin from '../components/icons/Linkedin.astro';
 			</h1>
 		
 			<h2 class="text-xl opacity-80 text-white font-medium text-wrap">
-				<span class="text-red-100/00">Web Developer Based in Mexico</span> — <span class="text-yellow-200/90 opacity-80">Specialized in UI Design, Responsive Interfaces, and Visual Development with React and Astro.
+				<span class="text-red-100/90">Mechatronic Engineer and Web Developer Based in Mexico</span> — <span class="text-yellow-200/90 opacity-80">Specialized in UI Design, Responsive Interfaces, and Visual Development with React and Astro.
 			</h2></span>
 
 			<nav class="flex flex-row gap-x-4 mt-4">
 				<SocialMedia href="https://github.com/Kekekingg">
-					<Github class="w-6 h-6"/>
+					<Github class="size-6"/>
 						   Github
 				</SocialMedia>
 				<SocialMedia href="https://www.linkedin.com/in/erik-mauricio-reyes-mart%C3%ADnez-6136b0256/">
-					<Linkedin class="w-6 h-6"/>
+					<Linkedin class="size-6"/>
 						   LinkedIn
+				</SocialMedia>
+				<SocialMedia href="mailto:erikmreyesm@gmail.com">
+					<Mail class="size-6"/>
+						   Send Email
 				</SocialMedia>
 
 			</nav>
