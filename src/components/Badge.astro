@@ -1,3 +1,35 @@
-<span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">
+<span class="badge transition-all duration-500 ease-in-out text-xs font-medium me-3 px-2 py-1 rounded-md text-white/90 border-2 bg-blue-900/50">
     <slot />
 </span>
+
+<style>
+    .badge {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .badge:hover {
+        animation: rainbow-border 6s ease-in-out infinite;
+        background: linear-gradient(
+            45deg,
+            rgba(39, 11, 249, 0.4),
+            rgba(99, 55, 255, 0.3)
+        );
+        background-size: 200% 200%;
+        animation: rainbow-border 6s ease-in-out infinite,
+                 gradient 3s ease-in-out infinite;
+    }
+
+    @keyframes rainbow-border {
+        0%, 100% { border-color: rgba(255, 0, 0, 0.7); }
+        16.66% { border-color: rgba(255, 128, 0, 0.7); }
+        33.33% { border-color: rgba(255, 255, 0, 0.7); }
+        50% { border-color: rgba(0, 255, 0, 0.7); }
+        66.66% { border-color: rgba(0, 0, 255, 0.7); }
+        83.33% { border-color: rgba(128, 0, 255, 0.7); }
+    }
+
+    @keyframes gradient {
+        0%, 100% { background-position: 50% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+</style>

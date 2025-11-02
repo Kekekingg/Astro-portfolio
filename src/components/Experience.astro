@@ -4,31 +4,31 @@ import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCE = [
   {
-    date: "February 2022",
-    title: "Application UI code in Tailwind CSS",
+    date: "Present...",
+    title: "Project Development through Udemy Coursework - Udemy",
     description:
-      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+      "Engaged in continuous project development by applying skills learned from various courses including Udemy, focusing on practical implementation and real-world applications.",
     link: "#",
   },
   {
-    date: "March 2022",
-    title: "Marketing UI design in Figma",
+    date: "2024-2025",
+    title: "Meta Front-End Developer Professional Certificate - Coursera",
     description:
-      "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
+      "Earned the Meta Front-End Developer Professional Certificate through Coursera, gaining hands-on experience in HTML, CSS, JavaScript, React, Git, GitHub, UI/UX design, responsive design, and accessibility.",
   },
   {
-    date: "April 2022",
-    title: "E-Commerce UI code in Tailwind CSS",
+    date: "2023 - 2024",
+    title: "Fullstack Developer Learning Path - Tec Milenio University",
     description:
-      "Get started with dozens of web components and interactive elements built on top of Tailwind CSS.",
+      "Completed a comprehensive Fullstack Developer learning path, covering both front-end and back-end technologies to build dynamic web applications.",
   },
 ];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
     {//  Iterate over the EXPERIENCE array and render ExperienceItem components
         EXPERIENCE.map(experience => (
-            <li class="mb-10 ms-4">
+            <li class="mb-10 ms-5">
                 <ExperienceItem {...experience}/>
             </li>
         ))

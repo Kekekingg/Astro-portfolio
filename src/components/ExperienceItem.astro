@@ -2,7 +2,7 @@
 interface Props {
     title: string;
     description: string;
-    link: string;
+    link?: string; //
     date: string;
 }
 const { date, title, description, link } = Astro.props; // Destructure props
@@ -12,13 +12,13 @@ const { date, title, description, link } = Astro.props; // Destructure props
 >
 </div>
 <time
-  class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+  class="mb-1 text-sm font-normal leading-none text-sky-200/70"
   >{date}</time
 >
-<h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-yellow-200 mt-2">
   {title}
 </h3>
-<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+<p class="mb-4 text-base font-normal text-gray-200 text-pretty">
   {description}
 </p>
 
@@ -27,7 +27,7 @@ const { date, title, description, link } = Astro.props; // Destructure props
     <a
   href="#"
   class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-  >Learn more <svg
+  >Discover more <svg
     class="w-3 h-3 ms-2 rtl:rotate-180"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
